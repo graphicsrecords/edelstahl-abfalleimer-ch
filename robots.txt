@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edelstahl-abfalleimer.ch/sitemap.xml

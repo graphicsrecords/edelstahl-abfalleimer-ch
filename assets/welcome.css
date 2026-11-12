@@ -1,0 +1,109 @@
+@font-face{font-family:"Inter Display";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/InterDisplay-Bold.woff) format("woff")}
+@font-face{font-family:"Inter Display";font-weight:600;font-style:normal;font-display:swap;src:url(fonts/InterDisplay-SemiBold.woff) format("woff")}
+@font-face{font-family:"Inter";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/Inter-Regular.woff) format("woff")}
+@font-face{font-family:"Inter";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/Inter-Medium.woff) format("woff")}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#050d1f;color:#fff;display:flex;flex-direction:column;min-height:100svh;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wtop{position:absolute;z-index:5;left:0;right:0;top:0;padding:1.4rem clamp(1.25rem,4vw,3rem) 2.6rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem;pointer-events:none;background:linear-gradient(rgba(5,13,31,.85),rgba(5,13,31,0))}
+.wname{margin:0;display:flex;flex-direction:column;gap:.15rem;font-size:.78rem;letter-spacing:.16em;color:#fff}
+.wname span{font-size:.7rem;letter-spacing:.04em;opacity:.8}
+.wtop h1{margin:0;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.rows{flex:1;display:flex;flex-direction:column}
+.row{position:relative;flex:1;min-height:clamp(340px,44svh,460px);display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate}
+.row:focus-visible{outline:4px solid #f2c230;outline-offset:-4px}
+.bgs{position:absolute;inset:0;z-index:-2;display:grid;grid-template-columns:repeat(3,1fr)}
+.bgs img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.row:hover .bgs img{transform:scale(1.05)}
+.row::before{content:"";position:absolute;inset:0;z-index:-1}
+.row-e::before{background:linear-gradient(90deg,rgba(5,13,31,.78),rgba(5,13,31,.5) 35%,rgba(5,13,31,.5) 65%,rgba(5,13,31,.78))}
+.row-s::before{background:linear-gradient(90deg,rgba(11,31,68,.9),rgba(19,48,106,.74) 40%,rgba(19,48,106,.74) 60%,rgba(11,31,68,.9))}
+.row-e{border-bottom:3px solid #f2c230}
+.inner{display:flex;align-items:center;justify-content:center;gap:clamp(1.5rem,4vw,3.5rem);padding:5.5rem clamp(1.25rem,4vw,3rem) 2.5rem;width:100%;max-width:1100px}
+.row-s .inner{padding-top:2.5rem}
+.bigbtn,.inner .lg{width:clamp(260px,29.7vw,380px);flex:none}
+.bigbtn{aspect-ratio:3600/1700;background:#050d1f;border:2px solid #f2c230;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center;transition:background .25s,color .25s;color:#fff;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.inner .lg{height:auto;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.bigbtn .moons{display:flex;gap:.7rem}
+.bigbtn .moons .moon{width:clamp(34px,3.6vw,46px)}
+.bigbtn b{font-size:clamp(.78rem,1.35vw,1.02rem);letter-spacing:.14em}
+.bigbtn em{font-style:normal;color:#f2c230;font-weight:700;font-size:.88rem}
+.row-e:hover .bigbtn{background:#f2c230;color:#0b1730}
+.row-e:hover .bigbtn em{color:#0b1730}
+.sub{font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.55;max-width:24em;color:#e6ecf8;text-shadow:0 1px 12px rgba(0,0,0,.6);display:block}
+.lnk{display:block;margin-top:.7rem;color:#f2c230;font-weight:700;font-size:.95rem}
+.row-s:hover .lnk{text-decoration:underline}
+.wfoot{background:#050d1f;padding:1rem clamp(1.25rem,4vw,3rem);font-size:.78rem;color:#9aa8c9;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 2rem}
+.wfoot p{margin:0}
+.wfoot a{text-decoration:underline}
+@media (max-width:820px){
+  .wtop h1{display:none}
+  .row{min-height:0}
+  .inner{flex-direction:column;text-align:center;padding:6rem 1.25rem 2.6rem}
+  .row-s .inner{padding-top:2.6rem}
+  .bigbtn,.inner .lg{width:min(300px,82vw)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.row-e::before{background:linear-gradient(90deg,rgba(5,13,31,.55),rgba(5,13,31,.3) 30%,rgba(5,13,31,.3) 55%,rgba(5,13,31,.62))}
+.row-s::before{background:linear-gradient(90deg,rgba(11,31,68,.72),rgba(19,48,106,.5) 30%,rgba(19,48,106,.5) 55%,rgba(11,31,68,.78))}
+@media (max-width:820px){.row-e::before{background:rgba(5,13,31,.5)}.row-s::before{background:rgba(11,31,68,.62)}}
+.row-e::before{background:linear-gradient(90deg,rgba(5,13,31,.58),rgba(5,13,31,.4) 30%,rgba(5,13,31,.5) 60%,rgba(5,13,31,.66))}
+.sub{text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 18px rgba(0,0,0,.7)}
+.vidbg{display:block}
+.vidbg video{width:100%;height:100%;object-fit:cover;display:block}
+.row:hover .vidbg video{transform:none}
+.vnote{position:absolute;right:clamp(1rem,3vw,2rem);bottom:.8rem;font-size:.68rem;letter-spacing:.06em;color:#dfe6f5;opacity:.85;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.row-e{flex:none;min-height:clamp(420px,58svh,640px)}
+.row-s{flex:none;min-height:clamp(320px,36svh,420px)}
+@media (max-width:820px){.row-e{min-height:0}.row-s{min-height:0}}
+/* Farben der Datenblätter: Schwarz-Marineblau-Verlauf, goldene Linie, Mond-Symbole mit Ring und Schein */
+.bigbtn{background:linear-gradient(90deg,#0a0f1d 0%,#0b2a63 50%,#07080c 100%);border:2px solid #f0c428;box-shadow:0 18px 50px rgba(0,0,0,.4),inset 0 -4px 0 #f0c428}
+.bigbtn .moons{gap:.2rem;margin-top:-.3rem}
+.bigbtn .moons .moon{width:clamp(54px,5.6vw,74px);margin:-.6rem -.2rem -.5rem}
+.bigbtn b{color:#fff;font-size:clamp(.78rem,1.3vw,1rem)}
+.bigbtn em{color:#f0c428}
+.row-e:hover .bigbtn{background:linear-gradient(90deg,#0d1424 0%,#12408f 50%,#0a0c12 100%);color:#fff;box-shadow:0 18px 50px rgba(0,0,0,.4),0 0 32px rgba(240,196,40,.55),inset 0 -4px 0 #f0c428}
+.row-e:hover .bigbtn em{color:#f0c428}
+/* Bilder lebendiger: leichterer Schleier */
+.row-e::before{background:linear-gradient(90deg,rgba(5,13,31,.38),rgba(5,13,31,.08) 32%,rgba(5,13,31,.14) 62%,rgba(5,13,31,.45))}
+.row-s::before{background:linear-gradient(90deg,rgba(11,31,68,.52),rgba(19,48,106,.14) 32%,rgba(19,48,106,.2) 62%,rgba(11,31,68,.55))}
+.sub{text-shadow:0 1px 3px rgba(0,0,0,.9),0 2px 20px rgba(0,0,0,.85)}
+@media (max-width:820px){.row-e::before{background:rgba(5,13,31,.22)}.row-s::before{background:rgba(11,31,68,.34)}}
+.inner .sub{background:rgba(5,13,31,.42);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:.9rem 1.1rem;border-radius:6px}
+.bigbtn .moons{gap:.1rem;margin-top:-.2rem}
+.bigbtn .moons .moon{width:clamp(58px,5.6vw,76px);margin:-.5rem -.1rem -.4rem}
+.wbrand{display:flex;align-items:center;gap:1.2rem}
+.wlogo{height:clamp(48px,6vw,64px);width:auto;padding-left:1.2rem;border-left:1px solid rgba(255,255,255,.3)}
+@media (max-width:820px){.wlogo{height:44px;padding-left:.8rem}.wbrand{gap:.8rem}}
+@media (max-width:820px){.row-e .inner{padding-top:7.2rem}}
+/* Feiner Goldrahmen statt harter Linie */
+.bigbtn{border:1px solid rgba(240,196,40,.55);box-shadow:0 14px 40px rgba(0,0,0,.35);position:relative}
+.bigbtn::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,rgba(240,196,40,0),#f0c428 30%,#f0c428 70%,rgba(240,196,40,0))}
+.row-e:hover .bigbtn{border-color:rgba(240,196,40,.85);box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 18px rgba(240,196,40,.22)}
+.row-e{border-bottom:0}
+.row-e::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,rgba(240,196,40,0),rgba(240,196,40,.75) 25%,rgba(240,196,40,.75) 75%,rgba(240,196,40,0));z-index:1}
+/* Marken-Animation */
+.row-s::before{background:linear-gradient(90deg,rgba(7,8,12,.15),rgba(7,8,12,0) 35%,rgba(7,8,12,0) 65%,rgba(7,8,12,.2))}
+/* Typografie und Texte: modern, ruhig, klar */
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-feature-settings:"ss01","cv11";letter-spacing:-.005em}
+.wname b,.bigbtn b,.wtop h1{font-family:"Inter Display","Inter",system-ui,sans-serif;font-weight:600}
+.bigbtn b{letter-spacing:.16em}
+.bigbtn em,.lnk{font-family:"Inter",system-ui,sans-serif;font-weight:500}
+.inner .txt{display:block;max-width:25em;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:1.3rem 1.5rem 1.4rem;box-shadow:0 12px 40px rgba(0,0,0,.28)}
+.inner .txt .sub{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;padding:0;border-radius:0;display:block;font-size:clamp(.95rem,1.15vw,1.05rem);line-height:1.6;color:#dfe6f5;font-weight:400;text-shadow:none;max-width:none}
+.num{display:block;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#f0c428;margin-bottom:.7rem}
+.txt strong{display:block;font-family:"Inter Display","Inter",system-ui,sans-serif;font-weight:700;font-size:clamp(1.45rem,2.3vw,2rem);line-height:1.08;letter-spacing:-.025em;color:#fff;margin-bottom:.6rem}
+.txt .lnk{display:inline-block;margin-top:.9rem;font-size:.92rem;color:#f0c428;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .3s;padding-bottom:2px}
+.row-s:hover .lnk{background-size:100% 1px;text-decoration:none}
+.row-e .txt::after{content:"Modelle ansehen →";display:inline-block;margin-top:.9rem;font-size:.92rem;font-weight:500;color:#f0c428}
+@media (max-width:820px){.inner .txt{max-width:30em;text-align:left}}
+.row-e .txt::after{content:none}
+.inner .txt{background:linear-gradient(135deg,rgba(8,12,24,.52),rgba(8,12,24,.30))}
+.row-s .inner .txt{background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.03))}
+.txt strong{letter-spacing:-.018em;word-spacing:.04em}
+/* Die Monde drehen sich um die eigene Achse (Canvas) */
+.bigbtn .moon{position:relative;display:block}
+.bigbtn .moon img{display:block;width:100%;height:auto;position:relative;z-index:1}
+.bigbtn .moon canvas{position:absolute;left:13.33%;top:13.33%;width:73.34%;height:73.34%;opacity:0;transition:opacity .4s}

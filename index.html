@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edelstahl-Abfalleimer Schweiz | HALFMOON &amp; FULLMOON | The Shop Maker</title>
+<meta name="description" content="Edelstahl-Abfalleimer.ch zeigt die Bestseller der Marke The Shop Maker: HALFMOON für draussen, FULLMOON für drinnen. Rostfreier Edelstahl 304, Lieferung in der ganzen Schweiz.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://edelstahl-abfalleimer.ch/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_CH">
+<meta property="og:title" content="Edelstahl-Abfalleimer Schweiz | The Shop Maker">
+<meta property="og:description" content="HALFMOON für draussen, FULLMOON für drinnen. Rostfreier Edelstahl 304, Lieferung in der ganzen Schweiz.">
+<meta property="og:image" content="https://edelstahl-abfalleimer.ch/assets/halfmoon.jpg">
+<link rel="stylesheet" href="assets/welcome.css">
+</head>
+<body>
+<header class="wtop">
+  <div class="wbrand"><p class="wname"><b>EDELSTAHL-ABFALLEIMER.CH</b><span>Bestseller der Marke The Shop Maker</span></p><img class="wlogo" src="assets/theshopmaker-logo.png" width="3600" height="1700" alt="The Shop Maker"></div>
+  <h1>Edelstahl-Abfalleimer für die Schweiz</h1>
+</header>
+<main class="rows">
+  <a class="row row-e" href="abfalleimer.html" data-track="willkommen_edelstahl">
+    <span class="bgs vidbg" aria-hidden="true"><video id="bsvid" autoplay muted loop playsinline preload="auto" poster="assets/bestseller-poster.jpg" data-d="assets/bestseller.mp4" data-m="assets/bestseller-m.mp4"></video></span>
+    <span class="inner">
+      <span class="bigbtn"><span class="moons" data-shade="assets/moon-shade.png"><span class="moon"><img src="assets/emblem-halfmoon-hd.png" data-ring="assets/ring-halfmoon.png" width="480" height="480" alt=""><canvas width="176" height="176" data-tex="assets/moon-tex-half.png" data-dark="1" data-speed="36" data-dir="1" aria-hidden="true"></canvas></span><span class="moon"><img src="assets/emblem-fullmoon-hd.png" data-ring="assets/ring-fullmoon.png" width="480" height="480" alt=""><canvas width="176" height="176" data-tex="assets/moon-tex.png" data-speed="52" data-dir="-1" aria-hidden="true"></canvas></span></span><b>EDELSTAHL-ABFALLEIMER.CH</b><em>Modelle entdecken <i aria-hidden="true">→</i></em></span>
+      <span class="txt"><span class="num">01 — Modelle</span><strong>Draussen. Drinnen. Edelstahl.</strong><span class="sub">HALFMOON für den Aussenbereich, FULLMOON für den Innenraum: rostfreier Edelstahl 304 für Gemeinden, Spitäler, Schulen, Museen und die Hotellerie.</span></span>
+    </span>
+  </a>
+  <a class="row row-s" href="https://www.theshopmaker.ch/?utm_source=edelstahl-abfalleimer.ch&amp;utm_medium=referral&amp;utm_campaign=offerte&amp;utm_content=willkommen" rel="noopener" data-track="willkommen_marke">
+    <span class="bgs vidbg" aria-hidden="true"><video autoplay muted loop playsinline preload="auto" poster="assets/marke-poster.jpg" data-d="assets/marke.mp4" data-m="assets/marke-m.mp4"></video></span>
+    <span class="inner">
+      <img class="lg" src="assets/theshopmaker-logo.png" width="3600" height="1700" alt="The Shop Maker – Logo">
+      <span class="txt"><span class="num">02 — Marke</span><strong>Die Marke dahinter.</strong><span class="sub">The Shop Maker: Verkauf und Vertrieb von Industriemöbeln. Zu den Kunden zählen Migros und Coop.</span><span class="lnk">Zu theshopmaker.ch <i aria-hidden="true">→</i></span></span>
+    </span>
+  </a>
+</main>
+<footer class="wfoot">
+  <p>Edelstahl-Abfalleimer.ch zeigt die Bestseller der Marke The Shop Maker, Altendorf SZ. Offerte, Bestellung und Lieferung in die ganze Schweiz laufen über theshopmaker.ch. Einige Bilder und Videos sind computergenerierte Visualisierungen.</p>
+  <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · Webdesign: Graphics Records</p>
+</footer>
+<script src="assets/site.js" defer></script>
+<script>(function(){var mob=window.matchMedia&&matchMedia("(max-width:820px)").matches;var red=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;[].forEach.call(document.querySelectorAll("video[data-d]"),function(v){v.src=mob?v.getAttribute("data-m"):v.getAttribute("data-d");if(red){v.removeAttribute("autoplay");v.pause()}else{var p=v.play();if(p&&p.catch)p.catch(function(){})}})})();
+(function(){
+var box=document.querySelector(".moons");if(!box)return;
+if(window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+var cvs=[].slice.call(box.querySelectorAll("canvas"));
+function load(s){return new Promise(function(ok,no){var i=new Image();i.onload=function(){ok(i)};i.onerror=no;i.src=s})}
+function px(i,w,h){var c=document.createElement("canvas");c.width=w;c.height=h;var x=c.getContext("2d");x.drawImage(i,0,0,w,h);return x.getImageData(0,0,w,h).data}
+Promise.all([load(cvs[0].dataset.tex),load(cvs[1].dataset.tex),load(box.dataset.shade)]).then(function(r){
+ var TS=[px(r[0],512,256),px(r[1],512,256)],S=px(r[2],176,176),N=176,moons=[];
+ cvs.forEach(function(cv,ci){
+  var img=cv.previousElementSibling,ctx=cv.getContext("2d"),id=ctx.createImageData(N,N),dark=!!cv.dataset.dark;
+  var lon0=new Float32Array(N*N),row=new Uint16Array(N*N),dd=new Float32Array(N*N),ins=new Uint8Array(N*N);
+  for(var y=0;y<N;y++)for(var x=0;x<N;x++){
+   var nx=(x+.5-N/2)/(N/2),ny=(y+.5-N/2)/(N/2),q=nx*nx+ny*ny,k=y*N+x;
+   if(q>1)continue;ins[k]=1;
+   lon0[k]=Math.atan2(nx,Math.sqrt(1-q));
+   row[k]=Math.min(255,Math.floor((Math.asin(-ny)/Math.PI+.5)*256));
+   if(dark){var t=(nx-.09)/.24;t=Math.max(0,Math.min(1,t*.5+.5));dd[k]=1-t*t*(3-2*t)}
+  }
+  var m={T:TS[ci],cv:cv,ctx:ctx,id:id,lon0:lon0,row:row,dd:dd,ins:ins,rot:Math.random()*6.28,sp:6.2832/+cv.dataset.speed*+cv.dataset.dir};
+  moons.push(m);
+  var rg=new Image();rg.onload=function(){img.src=rg.src;cv.style.opacity=1};rg.src=img.dataset.ring;
+ });
+ var f=1,tgt=1,last=0,hov=box.closest(".row");
+ if(hov){hov.addEventListener("mouseenter",function(){tgt=2.6});hov.addEventListener("mouseleave",function(){tgt=1})}
+ function draw(m){
+  var T=m.T,d=m.id.data,o=m.rot,TAU=6.2831853;
+  for(var k=0;k<N*N;k++){
+   if(!m.ins[k])continue;
+   var u=(m.lon0[k]+o)/TAU;u-=Math.floor(u);
+   var ti=((m.row[k]*512)+((u*512)|0))*4,si=k*4,j=k*4,dv=m.dd[k];
+   for(var c=0;c<3;c++){
+    var lit=T[ti+c]/128*S[si+c],dk=(c==0?14:c==1?27:58)*(S[si+c]/190);
+    d[j+c]=lit*(1-dv)+dk*dv;
+   }
+   d[j+3]=255;
+  }
+  m.ctx.putImageData(m.id,0,0);
+ }
+ function loop(t){
+  var dt=Math.min(.1,(t-last)/1000||0);last=t;
+  f+=(tgt-f)*Math.min(1,dt*4);
+  moons.forEach(function(m){m.rot+=m.sp*dt*f;draw(m)});
+  setTimeout(function(){requestAnimationFrame(loop)},24);
+ }
+ requestAnimationFrame(loop);
+}).catch(function(){});
+})();
+</script>
+</body>
+</html>
