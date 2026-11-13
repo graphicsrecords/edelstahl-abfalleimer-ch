@@ -91,7 +91,7 @@ body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Ari
 .wname b,.bigbtn b,.wtop h1{font-family:"Inter Display","Inter",system-ui,sans-serif;font-weight:600}
 .bigbtn b{letter-spacing:.16em}
 .bigbtn em,.lnk{font-family:"Inter",system-ui,sans-serif;font-weight:500}
-.inner .txt{display:block;max-width:25em;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:1.3rem 1.5rem 1.4rem;box-shadow:0 12px 40px rgba(0,0,0,.28)}
+.inner .txt{display:block;max-width:25em;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:1.3rem 1.5rem 1.4rem;box-shadow:0 12px 40px rgba(0,0,0,.28)}
 .inner .txt .sub{background:none;-webkit-backdrop-filter:none;backdrop-filter:none;padding:0;border-radius:0;display:block;font-size:clamp(.95rem,1.15vw,1.05rem);line-height:1.6;color:#dfe6f5;font-weight:400;text-shadow:none;max-width:none}
 .num{display:block;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#f0c428;margin-bottom:.7rem}
 .txt strong{display:block;font-family:"Inter Display","Inter",system-ui,sans-serif;font-weight:700;font-size:clamp(1.45rem,2.3vw,2rem);line-height:1.08;letter-spacing:-.025em;color:#fff;margin-bottom:.6rem}
@@ -107,3 +107,5 @@ body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Ari
 .bigbtn .moon{position:relative;display:block}
 .bigbtn .moon img{display:block;width:100%;height:auto;position:relative;z-index:1}
 .bigbtn .moon canvas{position:absolute;left:13.33%;top:13.33%;width:73.34%;height:73.34%;opacity:0;transition:opacity .4s}
+/* Einheitliche, dezente Rundung */
+.bigbtn,.inner .lg{border-radius:6px}
