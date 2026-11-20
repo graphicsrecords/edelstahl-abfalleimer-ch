@@ -5,7 +5,7 @@
 (function(){
   var GA_ID='';            // z. B. 'G-XXXXXXXXXX' (Google Analytics 4)
   var ADS_ID='AW-18548631026';           // Google Ads
-  var ADS_LABEL='zBkrCJO68LsdEPLL1oxF';        // Conversion-Label offerte_click
+  var ADS_LABEL='zBkrCJO68LsdEPLL1oxF';        // Conversion-Label (Offertanfrage gesendet)
   var KEY='ea_consent_v1';
   var active=!!(GA_ID||ADS_ID);
   var show=function(sel,on){[].forEach.call(document.querySelectorAll(sel),function(e){if(on)e.removeAttribute('hidden');else e.setAttribute('hidden','')})};
@@ -26,12 +26,11 @@
     gtag('js',new Date());
     if(GA_ID) gtag('config',GA_ID,{anonymize_ip:true});
     if(ADS_ID) gtag('config',ADS_ID);
+    // Conversion: nur auf der Dankesseite nach dem Absenden des Offertformulars
+    if(ADS_ID&&ADS_LABEL&&document.body&&document.body.hasAttribute('data-lead-conversion')&&!window.__conv){
+      window.__conv=1; gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL});
+    }
   }
-  document.addEventListener('click',function(ev){
-    if(!ADS_ID||!ADS_LABEL||get()!=='yes') return;
-    var a=ev.target.closest&&ev.target.closest('a[data-track]');
-    if(a) gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL});
-  });
   function banner(){
     if(document.getElementById('ea-cb')) return;
     var st=document.createElement('style');

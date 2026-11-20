@@ -1,0 +1,24 @@
+/* Offertformular */
+.of-page{max-width:52rem}
+.of-page .lead{font-size:1.08rem;color:var(--muted);margin:0 0 2rem}
+.of{display:block}
+.of .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.of-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.4rem;margin-bottom:1.1rem}
+.of .f{display:flex;flex-direction:column;gap:.35rem}
+.of label{font-weight:700;font-size:.9rem;color:var(--ink)}
+.of input[type=text],.of input[type=email],.of input[type=tel],.of select,.of textarea{
+  font:inherit;color:var(--ink);background:var(--white);border:1.5px solid var(--line);border-radius:8px;padding:.8rem .9rem;width:100%;box-sizing:border-box}
+.of textarea{resize:vertical;min-height:7rem}
+.of input:focus,.of select:focus,.of textarea:focus{outline:3px solid rgba(242,194,48,.55);border-color:var(--navy)}
+.of .f.bad input,.of .f.bad select,.of .f.bad textarea{border-color:#b3261e}
+.of .f.chk{flex-direction:row;align-items:flex-start;gap:.7rem;margin:1.2rem 0}
+.of .f.chk input{width:1.2rem;height:1.2rem;margin-top:.2rem;flex:none}
+.of .f.chk label{font-weight:400;line-height:1.5}
+.of .f.chk a{text-decoration:underline}
+.of-status{min-height:1.4rem;margin:.4rem 0 1rem;font-weight:600}
+.of-status.err{color:#b3261e}
+.of-status.ok{color:#1b6b34}
+.of button.btn{cursor:pointer;font:inherit;font-weight:800}
+.of button.btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.of-note{margin:1rem 0 0;font-size:.85rem;color:var(--muted)}
+@media(max-width:640px){.of-grid{grid-template-columns:1fr}}
