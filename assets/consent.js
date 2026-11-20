@@ -4,8 +4,8 @@
    Google lädt erst nach Klick auf "Akzeptieren". */
 (function(){
   var GA_ID='';            // z. B. 'G-XXXXXXXXXX' (Google Analytics 4)
-  var ADS_ID='';           // z. B. 'AW-XXXXXXXXXX' (Google Ads)
-  var ADS_LABEL='';        // Conversion-Label für offerte_click, z. B. 'AbC-D_efG-h12345'
+  var ADS_ID='AW-18548631026';           // Google Ads
+  var ADS_LABEL='zBkrCJO68LsdEPLL1oxF';        // Conversion-Label offerte_click
   var KEY='ea_consent_v1';
   var active=!!(GA_ID||ADS_ID);
   var show=function(sel,on){[].forEach.call(document.querySelectorAll(sel),function(e){if(on)e.removeAttribute('hidden');else e.setAttribute('hidden','')})};
