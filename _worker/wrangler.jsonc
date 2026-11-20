@@ -1,0 +1,8 @@
+{
+  "name": "offerte-formular",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "keep_vars": true,
+  "send_email": [{ "name": "OFFERTE_MAIL" }],
+  "vars": { "MAIL_FROM": "kontakt@edelstahl-abfalleimer.ch" }
+}
