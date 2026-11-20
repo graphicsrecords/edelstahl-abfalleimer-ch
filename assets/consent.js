@@ -5,7 +5,7 @@
 (function(){
   var GA_ID='';            // z. B. 'G-XXXXXXXXXX' (Google Analytics 4)
   var ADS_ID='AW-18548631026';           // Google Ads
-  var ADS_LABEL='zBkrCJO68LsdEPLL1oxF';        // Conversion-Label offerte_click
+  var ADS_LABEL='zBkrCJO68LsdEPLL1oxF';        // Conversion-Label (Offertanfrage gesendet)
   var KEY='ea_consent_v1';
   var active=!!(GA_ID||ADS_ID);
   var show=function(sel,on){[].forEach.call(document.querySelectorAll(sel),function(e){if(on)e.removeAttribute('hidden');else e.setAttribute('hidden','')})};
@@ -26,19 +26,18 @@
     gtag('js',new Date());
     if(GA_ID) gtag('config',GA_ID,{anonymize_ip:true});
     if(ADS_ID) gtag('config',ADS_ID);
+    // Conversion: nur auf der Dankesseite nach dem Absenden des Offertformulars
+    if(ADS_ID&&ADS_LABEL&&document.body&&document.body.hasAttribute('data-lead-conversion')&&!window.__conv){
+      window.__conv=1; gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL});
+    }
   }
-  document.addEventListener('click',function(ev){
-    if(!ADS_ID||!ADS_LABEL||get()!=='yes') return;
-    var a=ev.target.closest&&ev.target.closest('a[data-track]');
-    if(a) gtag('event','conversion',{send_to:ADS_ID+'/'+ADS_LABEL});
-  });
   function banner(){
     if(document.getElementById('ea-cb')) return;
     var st=document.createElement('style');
     st.textContent='#ea-cb{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:99;max-width:560px;margin:0 auto;background:#0a1730;color:#dfe6f5;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:1rem 1.2rem;box-shadow:0 12px 40px rgba(0,0,0,.45);font:400 .88rem/1.55 Inter,system-ui,sans-serif}#ea-cb a{color:#fff;text-decoration:underline}#ea-cb div{display:flex;gap:.6rem;margin-top:.8rem}#ea-cb button{flex:1;padding:.6rem 1rem;border-radius:6px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:inherit;font-weight:500;cursor:pointer}#ea-cb button.ok{background:#fff;color:#0a1730}';
     document.head.appendChild(st);
     var b=document.createElement('div'); b.id='ea-cb'; b.setAttribute('role','dialog'); b.setAttribute('aria-label','Cookies und Messung');
-    b.innerHTML='<p style="margin:0">Wir möchten mit Google Analytics und Google Ads messen, wie die Website genutzt wird, um sie und unsere Werbung zu verbessern. Das geschieht nur mit Ihrer Einwilligung. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p><div><button type="button" data-v="no">Ablehnen</button><button type="button" class="ok" data-v="yes">Akzeptieren</button></div>';
+    b.innerHTML='<p style="margin:0">Wir möchten mit Google Ads messen, ob unsere Werbung zu Offertanfragen führt, um sie zu verbessern. Das geschieht nur mit Ihrer Einwilligung. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p><div><button type="button" data-v="no">Ablehnen</button><button type="button" class="ok" data-v="yes">Akzeptieren</button></div>';
     b.addEventListener('click',function(e){var v=e.target.getAttribute&&e.target.getAttribute('data-v'); if(!v) return; set(v); b.remove(); if(v==='yes') load();});
     document.body.appendChild(b);
   }
