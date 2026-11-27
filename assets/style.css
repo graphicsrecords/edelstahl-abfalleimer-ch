@@ -442,8 +442,11 @@ footer{padding-top:2.4rem}
 .duo .spec dt{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:0 0 .1rem}
 .duo .spec dd{margin:0;font-weight:700;font-size:.92rem;color:var(--navy);font-variant-numeric:tabular-nums}
 .duo .actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.2rem;margin-top:auto}
-.duo .go{font-size:.82rem}
-.duo .go::after{content:" →"}
-.duo .mini{font-weight:700;font-size:.76rem;letter-spacing:.06em;text-decoration:none;color:var(--navy);border:1.5px solid var(--navy);padding:.4rem .9rem;border-radius:999px;transition:background .25s,color .25s}
-.duo .mini:hover,.duo .mini:focus-visible{background:var(--navy);color:#fff}
+.duo .go,.duo .mini{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;font-weight:600;letter-spacing:.02em;text-decoration:none;padding:.65rem 1.15rem;border-radius:6px;border:0;transition:background .2s,color .2s,transform .2s}
+.duo .go{background:var(--navy);color:#fff}
+.duo .go::after{content:"→"}
+.duo .go:hover,.duo .go:focus-visible{background:var(--navy-2)}
+.duo .mini{background:var(--yellow);color:var(--navy)}
+.duo .mini:hover,.duo .mini:focus-visible{background:#ffd34d}
+.duo .go:active,.duo .mini:active{transform:translateY(1px)}
 @media (max-width:640px){.duo .ph{aspect-ratio:4/3}.duo h2{font-size:1.6rem}}
