@@ -557,3 +557,18 @@ footer{padding-top:2.4rem}
 @media (max-width:820px){.mbody{padding:1.3rem 1.3rem 1.6rem}.mthumbs{margin:1rem 1.3rem 0}.mband{padding:1.5rem}}
 .models .mhead h2{text-wrap:balance}
 @media (max-width:480px){.models .go,.models .mini{padding:.68rem 1rem;font-size:.82rem}.models .actions{gap:.6rem}}
+
+/* Apple-Stil: nitid, ohne Graustich */
+.models{--a-ink:#000;--a-mute:#3a3a3c;--a-soft:#6e6e73;--a-line:#e5e5ea;--a-card:#fff;background:#fff;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale}
+.models .mhead h2{color:#000}
+.models .mhead h2 em{color:#6e6e73}
+.mtile{background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.07),0 18px 40px -24px rgba(0,0,0,.22)}
+.mtile:hover{box-shadow:0 0 0 1px rgba(0,0,0,.08),0 34px 60px -34px rgba(0,0,0,.34)}
+.js .models .mtile.in,.js .models .mhead.in,.js .models .mband.in{transform:none;filter:none}
+.mph{background:#fff}
+.mthumbs button{opacity:1;background:#fff;border-color:#e5e5ea}
+.mthumbs button[aria-current="true"]{border-color:#000}
+.mtxt,.mfeat li{color:#1d1d1f}
+.mstats dd{color:#000}
+.mstats dt,.mstats dd small,.mkick{color:#6e6e73}
+.mband{background:#000}
