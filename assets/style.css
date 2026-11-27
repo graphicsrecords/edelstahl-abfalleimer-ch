@@ -427,3 +427,19 @@ footer{padding-top:2.4rem}
 .legal-page h1{margin:0 0 1.5rem}
 .legal-page h2{font-size:1.15rem;margin:2rem 0 .4rem}
 .legal-page p{line-height:1.65}
+
+/* Modellkarten: dezente Aufwertung */
+.duo article{display:flex;flex-direction:column}
+.duo .ph{box-shadow:0 22px 44px -28px rgba(10,20,40,.55)}
+.duo .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,40,.34),rgba(10,20,40,0) 40%);pointer-events:none;z-index:1}
+.duo .badge{position:absolute;left:1rem;bottom:1rem;z-index:2;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:rgba(14,22,42,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:.6rem .8rem;border-left:3px solid var(--yellow)}
+.duo .spec{display:grid;grid-template-columns:repeat(3,1fr);margin:.2rem 0 1.5rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.duo .spec div{padding:.8rem 1rem;border-left:1px solid var(--line)}
+.duo .spec div:first-child{border-left:0;padding-left:0}
+.duo .spec dt{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:0 0 .25rem}
+.duo .spec dd{margin:0;font-weight:800;font-size:1.05rem;color:var(--navy);font-variant-numeric:tabular-nums}
+.duo .actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.4rem;margin-top:auto}
+.duo .go::after{content:" →"}
+.duo .mini{font-weight:800;font-size:.82rem;letter-spacing:.06em;text-decoration:none;color:var(--navy);border:2px solid var(--navy);padding:.55rem 1.05rem;border-radius:999px;transition:background .25s,color .25s}
+.duo .mini:hover,.duo .mini:focus-visible{background:var(--navy);color:#fff}
+@media (max-width:640px){.duo .spec dd{font-size:.95rem}.duo .spec div{padding:.7rem .6rem}}
