@@ -450,7 +450,7 @@ footer{padding-top:2.4rem}
 .mkick{display:flex;align-items:center;gap:.8rem;margin:0 0 .9rem;font-size:.64rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .mkick b{font-family:Georgia,"Times New Roman",serif;font-size:.95rem;letter-spacing:.05em;color:var(--navy)}
 .mkick b::after{content:"";display:inline-block;width:2rem;height:1px;background:var(--navy);vertical-align:middle;margin-left:.8rem;opacity:.5}
-.mbody h3{margin:0 0 .7rem;font-size:clamp(2.1rem,3.6vw,3rem);line-height:1;letter-spacing:.03em;font-weight:700;color:var(--navy)}
+.mbody h3{margin:0 0 .7rem;font-size:clamp(1.45rem,2.1vw,1.85rem);line-height:1.1;letter-spacing:.16em;font-weight:400;color:var(--navy)}
 .mbody h3 a{color:inherit;text-decoration:none}
 .mtxt{margin:0 0 1.3rem;color:var(--muted);font-size:1rem;line-height:1.6;max-width:32rem}
 .mfeat{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.55rem}
