@@ -25,3 +25,25 @@
     if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){load(1);o.disconnect()}},{rootMargin:'300px'}).observe(t)}
   });
 })();
+
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.models .mhead,.models .mtile,.models .mband'));
+  if(!els.length)return;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function count(el){
+    [].slice.call(el.querySelectorAll('.mstats dd')).forEach(function(dd){
+      var tn=dd.firstChild;if(!tn||tn.nodeType!==3)return;
+      var end=parseInt(tn.nodeValue,10);if(isNaN(end))return;
+      if(reduce){return}
+      var t0=null,dur=1100;
+      function step(ts){if(t0===null)t0=ts;var k=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-k,3);tn.nodeValue=String(Math.round(end*e));if(k<1)requestAnimationFrame(step);else tn.nodeValue=String(end)}
+      tn.nodeValue='0';requestAnimationFrame(step);
+    });
+  }
+  function show(el){if(el.classList.contains('in'))return;el.classList.add('in');if(el.classList.contains('mtile'))count(el)}
+  if('IntersectionObserver' in window&&!reduce){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in')})},4000);
+})();
