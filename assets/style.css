@@ -623,7 +623,7 @@ footer.fz a:hover,footer.fz a:focus-visible{color:var(--yellow)}
 html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 header.top.hz{transition:transform .4s cubic-bezier(.2,.6,.2,1),background .3s,box-shadow .3s}
-header.top.hz.away{transform:translateY(-101%)}
+header.top.hz.away{transform:none}
 .hz-nav{margin-left:auto;display:flex;align-items:center;gap:.5rem}
 header.top.hz .hz-nav a,.dd-btn{box-sizing:border-box}
 .dd{position:relative}

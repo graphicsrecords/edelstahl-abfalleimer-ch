@@ -16,17 +16,6 @@
   if(burger) burger.addEventListener('click',function(e){e.stopPropagation();setMenu(!h.classList.contains('menu-open'));});
   h.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(a){closeAll();setMenu(false);}});
 
-  /* Kopfzeile: beim Runterscrollen ausblenden, beim Hochscrollen einblenden */
-  var last=window.scrollY,tick=false;
-  function onScroll(){
-    var y=window.scrollY;
-    if(!h.classList.contains('menu-open')&&!h.querySelector('.dd.open')){
-      if(y>last+6&&y>240) h.classList.add('away'); else if(y<last-6||y<120) h.classList.remove('away');
-    }
-    last=y;tick=false;
-  }
-  window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll);}},{passive:true});
-
   /* Fusszeile: Gruppen am Handy ein- und ausklappbar, am Desktop immer offen */
   var mq=window.matchMedia('(max-width:900px)');
   var cols=[].slice.call(document.querySelectorAll('footer.fz details.fz-col'));
