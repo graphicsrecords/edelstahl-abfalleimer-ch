@@ -835,3 +835,23 @@ footer.fz::before{content:"";position:absolute;z-index:0;right:-10%;bottom:-35%;
 /* Kein seitliches Wackeln */
 footer.fz{overflow:hidden}
 html,body{overflow-x:clip}
+
+/* Marke: klar gegliedert */
+.mb2{background:linear-gradient(180deg,#070b14 0%,#09132a 100%)}
+.mb2 .wrap{grid-template-columns:minmax(220px,.7fr) 1.5fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.mb-logo{display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;padding-right:clamp(0rem,2vw,1.5rem);border-right:1px solid rgba(255,255,255,.1)}
+.mb2 .logo{max-width:300px}
+.mb-since{margin:0!important;color:#c9a74a!important;font-size:.76rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase}
+.mb-eyebrow{margin:0 0 .9rem!important;color:#c9a74a!important;font-size:.76rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+.mb2 h2{font-family:Georgia,"Times New Roman",Times,serif;font-weight:400;font-size:clamp(1.9rem,3.8vw,3rem);line-height:1.1;margin:0 0 1rem;color:#fff}
+.mb2 h2 em{font-style:italic;color:#d8b860}
+.mb-lead{font-size:1.05rem;color:#b7c3df;max-width:34rem;margin:0 0 1.8rem!important}
+.mb-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:0 0 2rem;padding:0;border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14)}
+.mb-facts div{padding:1.1rem 1rem 1.1rem 0;display:flex;flex-direction:column;gap:.45rem}
+.mb-facts div+div{padding-left:1.2rem;border-left:1px solid rgba(255,255,255,.1)}
+.mb-facts dt{color:#c9a74a;font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;padding:0}
+.mb-facts dd{margin:0;color:#fff;font-size:.98rem;line-height:1.4}
+@media (max-width:980px){.mb-facts{grid-template-columns:1fr 1fr}.mb-facts div:nth-child(3){border-left:0;padding-left:0}.mb-facts div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.1)}}
+@media (max-width:760px){.mb2 .wrap{grid-template-columns:1fr}.mb-logo{border-right:0;padding-right:0;flex-direction:row;align-items:center;gap:1.2rem;flex-wrap:wrap}.mb2 .logo{max-width:180px}}
+.mb2 .mb-facts{grid-template-columns:repeat(4,1fr);gap:0}
+@media (max-width:980px){.mb2 .mb-facts{grid-template-columns:1fr 1fr}}
