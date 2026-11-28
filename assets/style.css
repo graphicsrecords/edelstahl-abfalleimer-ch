@@ -821,3 +821,13 @@ header.top.hz .dd-panel.mega a.ml:hover{background:rgba(143,180,255,.08)}
 footer.fz::before{content:"";position:absolute;z-index:0;right:-10%;bottom:-35%;width:min(58vw,700px);aspect-ratio:1;background:url(wm-azul.webp) center/contain no-repeat;opacity:.08;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%);mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)}
 @media (max-width:700px){.models::before{width:110vw;right:-30%;opacity:.06}.einsatzband::before{width:120vw;opacity:.09}footer.fz::before{width:110vw;opacity:.07}}
 .models,.einsatzband{overflow:hidden}
+
+/* Handy: weniger Elemente, ruhiger */
+@media (max-width:700px){
+  .models::before,footer.fz::before{display:none}
+  .models .maud,.models .mpill,.models .mcount{display:none}
+  .models .mhead{margin-bottom:1.6rem}
+  .mthumbs{margin:.8rem 1.3rem 0}
+  .mthumbs button{width:3.2rem;height:2.4rem}
+  .mkick b,.mkick .moon{display:none}
+}
