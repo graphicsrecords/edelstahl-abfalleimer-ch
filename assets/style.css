@@ -709,3 +709,30 @@ header.top.hz .hz-nav .nav-link{display:inline-flex}
 }
 @media (max-width:900px){.fz-cols{grid-template-columns:1fr}}
 @media (max-width:860px){header.top.hz .hz-nav{display:none}header.top.hz.menu-open .hz-nav{display:flex}}
+
+/* Fusszeile: kühn */
+html{view-transition-name:none}
+@view-transition{navigation:auto}
+footer.fz{position:relative;overflow:hidden;padding-top:0;background:#050d1f}
+.fz-ticker{background:var(--yellow);color:#0b1f44;overflow:hidden;white-space:nowrap;border-bottom:1px solid #0b1f44}
+.fz-track{display:inline-flex;align-items:center;gap:1.8rem;padding:.95rem 0;animation:fz-run 38s linear infinite;will-change:transform}
+.fz-track span{font-weight:800;font-size:clamp(.95rem,1.6vw,1.2rem);letter-spacing:.22em;text-transform:uppercase}
+.fz-track i{font-style:normal;font-size:.9rem}
+@keyframes fz-run{to{transform:translateX(-25%)}}
+.fz-ticker:hover .fz-track{animation-play-state:paused}
+.fz-hero{padding-top:clamp(3.5rem,9vw,7rem);padding-bottom:clamp(3rem,7vw,5.5rem)}
+.fz-eyebrow{margin:0 0 1.2rem;color:var(--yellow);font-size:.82rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+.fz-hero h2{margin:0 0 clamp(1.8rem,4vw,2.8rem);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:900;font-size:clamp(2.6rem,9vw,8rem);line-height:.92;letter-spacing:-.045em;color:#fff;text-transform:uppercase;max-width:14ch}
+.fz-hero h2 em{font-style:normal;color:var(--yellow)}
+.fz-mega{display:inline-flex;align-items:center;gap:1.1rem;background:var(--yellow);color:#0b1f44;font-weight:800;font-size:clamp(1.05rem,2vw,1.5rem);letter-spacing:.02em;text-decoration:none;padding:1.25rem clamp(1.6rem,4vw,3rem);border-radius:2px;border:2px solid var(--yellow);box-shadow:8px 8px 0 rgba(242,194,48,.28);transition:transform .25s,box-shadow .25s,background .25s,color .25s}
+.fz-mega span{transition:transform .25s}
+.fz-mega:hover,.fz-mega:focus-visible{background:transparent;color:var(--yellow);transform:translate(-3px,-3px);box-shadow:11px 11px 0 rgba(242,194,48,.4)}
+.fz-mega:hover span{transform:translateX(6px)}
+.fz-mega:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.fz-giant{margin-top:clamp(1rem,3vw,2rem);text-align:center;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:900;font-size:clamp(4rem,19.5vw,19rem);line-height:.74;letter-spacing:-.05em;white-space:nowrap;user-select:none;height:.62em;overflow:hidden;background:linear-gradient(100deg,#51607f 0%,#c9d3e6 22%,#f4f7fc 38%,#8d9bb8 55%,#e6ecf7 72%,#5a6a8a 100%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fz-sheen 9s ease-in-out infinite alternate;opacity:.95}
+@keyframes fz-sheen{to{background-position:100% 0}}
+@media (prefers-reduced-motion:reduce){.fz-track,.fz-giant{animation:none}}
+footer.fz .wrap.fz-hero{display:block}
+.fz-giant{font-size:14.1vw;height:.66em;line-height:.8;padding:0 1vw;box-sizing:border-box}
+footer.fz .fz-mega{color:#0b1f44}
+footer.fz .fz-mega:hover,footer.fz .fz-mega:focus-visible{color:var(--yellow)}
