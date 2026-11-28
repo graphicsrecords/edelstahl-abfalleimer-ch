@@ -831,3 +831,7 @@ footer.fz::before{content:"";position:absolute;z-index:0;right:-10%;bottom:-35%;
   .mthumbs button{width:3.2rem;height:2.4rem}
   .mkick b,.mkick .moon{display:none}
 }
+
+/* Kein seitliches Wackeln */
+footer.fz{overflow:hidden}
+html,body{overflow-x:clip}
