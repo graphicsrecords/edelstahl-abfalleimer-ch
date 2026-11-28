@@ -812,3 +812,12 @@ header.top.hz .dd-panel.mega a.ml:hover{background:rgba(143,180,255,.08)}
 @media (max-width:860px){.eb-grid{grid-template-columns:1fr}}
 .models{padding:clamp(3rem,6vw,5rem) 0}
 .models .mhead{margin-bottom:clamp(2rem,4vw,3rem)}
+
+/* Marken-Wasserzeichen: feine Konstruktionszeichnungen */
+.models,.einsatzband,footer.fz{position:relative;isolation:isolate}
+.models>.wrap,.einsatzband>.wrap,footer.fz>.wrap{position:relative;z-index:1}
+.models::before{content:"";position:absolute;z-index:0;right:-8%;top:-4%;width:min(62vw,760px);aspect-ratio:1;background:url(wm-plano.webp) center/contain no-repeat;opacity:.12;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.einsatzband::before{content:"";position:absolute;z-index:0;left:-6%;bottom:-30%;width:min(70vw,820px);aspect-ratio:1;background:url(wm-azul.webp) center/contain no-repeat;opacity:.11;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 50%,transparent 100%);mask-image:radial-gradient(closest-side,#000 50%,transparent 100%)}
+footer.fz::before{content:"";position:absolute;z-index:0;right:-10%;bottom:-35%;width:min(58vw,700px);aspect-ratio:1;background:url(wm-azul.webp) center/contain no-repeat;opacity:.08;pointer-events:none;-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%);mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)}
+@media (max-width:700px){.models::before{width:110vw;right:-30%;opacity:.06}.einsatzband::before{width:120vw;opacity:.09}footer.fz::before{width:110vw;opacity:.07}}
+.models,.einsatzband{overflow:hidden}
