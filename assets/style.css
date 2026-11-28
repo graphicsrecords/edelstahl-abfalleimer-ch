@@ -710,16 +710,8 @@ header.top.hz .hz-nav .nav-link{display:inline-flex}
 @media (max-width:900px){.fz-cols{grid-template-columns:1fr}}
 @media (max-width:860px){header.top.hz .hz-nav{display:none}header.top.hz.menu-open .hz-nav{display:flex}}
 
-/* Fusszeile: kühn */
 html{view-transition-name:none}
 @view-transition{navigation:auto}
-footer.fz{position:relative;overflow:hidden;padding-top:0;background:#050d1f}
-.fz-ticker{background:var(--yellow);color:#0b1f44;overflow:hidden;white-space:nowrap;border-bottom:1px solid #0b1f44}
-.fz-track{display:inline-flex;align-items:center;gap:1.8rem;padding:.95rem 0;animation:fz-run 38s linear infinite;will-change:transform}
-.fz-track span{font-weight:800;font-size:clamp(.95rem,1.6vw,1.2rem);letter-spacing:.22em;text-transform:uppercase}
-.fz-track i{font-style:normal;font-size:.9rem}
-@keyframes fz-run{to{transform:translateX(-25%)}}
-.fz-ticker:hover .fz-track{animation-play-state:paused}
 .fz-hero{padding-top:clamp(3.5rem,9vw,7rem);padding-bottom:clamp(3rem,7vw,5.5rem)}
 .fz-eyebrow{margin:0 0 1.2rem;color:var(--yellow);font-size:.82rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
 .fz-hero h2{margin:0 0 clamp(1.8rem,4vw,2.8rem);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-weight:900;font-size:clamp(2.6rem,9vw,8rem);line-height:.92;letter-spacing:-.045em;color:#fff;text-transform:uppercase;max-width:14ch}
@@ -736,3 +728,26 @@ footer.fz .wrap.fz-hero{display:block}
 .fz-giant{font-size:14.1vw;height:.66em;line-height:.8;padding:0 1vw;box-sizing:border-box}
 footer.fz .fz-mega{color:#0b1f44}
 footer.fz .fz-mega:hover,footer.fz .fz-mega:focus-visible{color:var(--yellow)}
+
+/* Klassisch und ruhig: Gelb nur sparsam */
+footer.fz{background:#06122a}
+.fz-hero{padding-top:clamp(3rem,6vw,4.8rem);padding-bottom:clamp(2.4rem,5vw,3.6rem);border-bottom:1px solid rgba(255,255,255,.12);text-align:left}
+.fz-eyebrow{color:#c9a74a;letter-spacing:.3em;font-weight:600;font-size:.76rem;margin-bottom:1rem}
+.fz-hero h2,.fz-hero h2.serif{font-family:Georgia,"Times New Roman",Times,serif;font-weight:400;text-transform:none;letter-spacing:-.01em;line-height:1.12;font-size:clamp(2rem,4.6vw,3.5rem);max-width:none;margin:0 0 1.8rem;color:#fff}
+.fz-hero h2 em{font-style:italic;color:#d8b860}
+footer.fz .fz-mega{display:inline-flex;gap:.9rem;padding:.95rem 1.9rem;background:transparent;color:#fff;border:1px solid #c9a74a;border-radius:2px;box-shadow:none;font-size:.98rem;font-weight:500;letter-spacing:.04em}
+footer.fz .fz-mega:hover,footer.fz .fz-mega:focus-visible{background:#c9a74a;color:#06122a;transform:none;box-shadow:none}
+.fz-giant,.fz-ticker{display:none}
+.hz-cta{background:transparent;border:1px solid #c9a74a;color:#fff;font-weight:500}
+.hz-cta:hover,.hz-cta:focus-visible{background:#c9a74a;border-color:#c9a74a;color:#06122a;transform:none;box-shadow:none}
+.btn{background:#fff;border-color:#fff;color:var(--navy)}
+.btn:hover{background:#f1f3f8;border-color:#f1f3f8;box-shadow:none;transform:none}
+.btn.ghost{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.08);border-color:#c9a74a;color:#fff}
+.btn.dark{background:var(--navy);border-color:var(--navy);color:#fff}
+.btn.dark:hover{background:var(--navy-2);border-color:var(--navy-2)}
+.models .mini{background:transparent;border-color:var(--navy);color:var(--navy);box-shadow:none}
+.models .mini:hover,.models .mini:focus-visible{background:var(--navy);border-color:var(--navy);color:#fff;transform:none;box-shadow:none}
+.models .mband .mini,.mband .mini{background:#fff;border-color:#fff;color:var(--navy)}
+.fz-hero{border-bottom:0}
+.fz-cols{border-top:1px solid rgba(255,255,255,.12);padding-top:clamp(2rem,4vw,3rem)}
